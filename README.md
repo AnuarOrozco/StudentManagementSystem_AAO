@@ -1,0 +1,6 @@
+![GET Students](https://github.com/user-attachments/assets/8ffd2e01-9ba3-4d9d-af31-8f84af1f0bdb)
+![GET Student by email](https://github.com/user-attachments/assets/3144ad61-0d2a-4e05-bb05-415b5fa8e8cd)
+![POST Student](https://github.com/user-attachments/assets/d9380ddf-b067-4f35-8cae-6eda82bae2aa)
+![PUT Student](https://github.com/user-attachments/assets/d22a0d8b-89bd-49b1-abc6-df274acea94d)
+![PATCH Student](https://github.com/user-attachments/assets/7e5bdc72-bbdc-4e20-ba32-87916a602dec)
+![DELETE Student](https://github.com/user-attachments/assets/9894f2e3-d8e3-4100-befd-528b89042d4c)
