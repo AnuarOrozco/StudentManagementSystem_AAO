@@ -2,9 +2,7 @@ package mx.arquitectura_microservicios.student_management.controllers;
 
 import mx.arquitectura_microservicios.student_management.domain.Student;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,5 +50,14 @@ public class StudentController {
         }
         return null; // Bad practice but I have to do it by now
     }
+
+    @PostMapping
+    public Student postStudent(@RequestBody Student student) {
+        students.add(student);
+
+        return student;
+    }
+
+
 
 }
