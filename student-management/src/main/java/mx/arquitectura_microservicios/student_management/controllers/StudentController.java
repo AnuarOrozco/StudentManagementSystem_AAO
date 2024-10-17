@@ -36,6 +36,7 @@ public class StudentController {
             new Student(20, "Pablo Ledesma", "pablo.l@example.com", 22, "Música")
     ));
 
+    // GET STUDENTS
     @GetMapping
     public List<Student> getStudents() {
         return students;
@@ -51,6 +52,7 @@ public class StudentController {
         return null; // Bad practice but I have to do it by now
     }
 
+    // UPLOAD STUDENT
     @PostMapping
     public Student postStudent(@RequestBody Student student) {
         students.add(student);
@@ -58,6 +60,43 @@ public class StudentController {
         return student;
     }
 
+    // UPDATE METHODS
+    @PutMapping
+    public Student putStudent(@RequestBody Student student) {
+        for (Student s : students) {
+            if (s.getId() == student.getId()) {
+                s.setName(student.getName());
+                s.setEmail(student.getEmail());
+                s.setAge(student.getAge());
+                s.setCourse(student.getCourse());
 
+                return s;
+            }
+        }
+        return null;
+    }
+
+    @PatchMapping
+    public Student patchStudent(@RequestBody Student student) {
+        for (Student s : students) {
+            if (s.getId() == student.getId()) {
+                if (student.getName() != null) {
+                    s.setName(student.getName());
+                }
+                if (student.getEmail() != null) {
+                    s.setEmail(student.getEmail());
+                }
+                if (student.getAge() != 0) {
+                    s.setAge(student.getAge());
+                }
+                if (student.getCourse() != null) {
+                    s.setCourse(student.getCourse());
+                }
+
+                return s;
+            }
+        }
+        return null;
+    }
 
 }
